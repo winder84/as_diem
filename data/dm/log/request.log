@@ -1,0 +1,22 @@
+
+1396866524|/|200|front|prod|89.249.20.142||Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|29097984|559|
+1396866527|/|401|admin|prod|89.249.20.142||Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|34865152|791|
+1396866532|/security/signin|302|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|27262976|221|
+1396866533|/|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|25427968|390|
+1396866534|/tools/monitoring/chart/image/name/week|200|admin|prod|89.249.20.142|1||1|23592960|126|
+1396866534|/tools/monitoring/chart/image/name/content|200|admin|prod|89.249.20.142|1||1|23068672|269|
+1396866535|/tools/monitoring/chart/image/name/browser|200|admin|prod|89.249.20.142|1||1|22806528|115|
+1396866535|/tools/monitoring/chart/image/name/visit|200|admin|prod|89.249.20.142|1||1|22806528|116|
+1396866536|/tools/monitoring/chart/image/name/log|200|admin|prod|89.249.20.142|1||1|22282240|114|
+1396866540|/system/configuration/settings/index|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|27000832|1736|
+1396866549|/tools/configuration/configuration-panel/index|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|25427968|380|
+1396866569|/tools/configuration/configuration-panel/index|302|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|24379392|172|
+1396866570|/tools/configuration/configuration-panel/index|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|25690112|351|
+1396866576|/tools/configuration/configuration-panel/index|302|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|24379392|171|
+1396866577|/tools/configuration/configuration-panel/index|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|25690112|238|
+1396866587|/|200|admin|prod|89.249.20.142|1|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36|0|23330816|145|
+1396866588|/tools/monitoring/chart/image/name/week|200|admin|prod|89.249.20.142|1||1|22806528|155|
+1396866589|/tools/monitoring/chart/image/name/content|200|admin|prod|89.249.20.142|1||1|22020096|114|
+1396866589|/tools/monitoring/chart/image/name/browser|200|admin|prod|89.249.20.142|1||1|22806528|117|
+1396866590|/tools/monitoring/chart/image/name/visit|200|admin|prod|89.249.20.142|1||1|22806528|116|
+1396866590|/tools/monitoring/chart/image/name/log|200|admin|prod|89.249.20.142|1||1|22282240|114|
