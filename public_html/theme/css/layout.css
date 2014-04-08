@@ -1,5 +1,5 @@
 .dm_layout {
-  width: 1000px;
+  width: 1020px;
   margin: auto;
 }
 
@@ -8,17 +8,7 @@
 }
 
 .dm_content {
-  width: 600px;
-  float: left;
-}
-
-.dm_layout_left {
-  width: 150px;
-  float: left;
-}
-
-.dm_layout_right {
-  width: 250px;
+  width: 1020px;
   float: left;
 }
 
