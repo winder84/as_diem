@@ -1,10 +1,10 @@
 .dm_layout {
   width: 1020px;
   margin: auto;
+	background: #fff;
 }
 
 .dm_layout_top {
-  background: #aaa;
 }
 
 .dm_content {
@@ -13,5 +13,4 @@
 }
 
 .dm_layout_bottom {
-  background: #aaa;
 }

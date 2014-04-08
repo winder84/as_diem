@@ -1,3 +1,8 @@
+body {
+	background: lightgray;
+	margin: 0;
+}
+
 .elements .element {
   list-style: disc inside;
   padding: 1em;
@@ -31,4 +36,95 @@ h4 {
 
 .navigation_bread_crumb li, .pager li {
   display: inline;
+}
+
+.header_ul {
+	list-style: none;
+	margin: 10px;
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	font-size: 14px;
+}
+
+.header_ul li {
+	display: inline-block;
+}
+
+.logo_title {
+	font-weight: bold;
+	text-shadow: 1px 1px 10px #ccc;
+	margin: 0;
+	padding: 0;
+}
+
+.logo_title a {
+	text-decoration: none;
+	color: #333;
+}
+
+.header_menu_li {
+	vertical-align: top;
+}
+
+.header_menu {
+	list-style: none;
+	margin: 70px 0 0 20px;
+	padding: 0;
+}
+
+.header_menu li {
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.header_menu li a {
+	text-decoration: none;
+	color: #777;
+}
+
+.header_menu li a:hover {
+	color: darkred;
+}
+.menu_delimer {
+	display: inline-block;
+	background: url("../images/menu_delimer.png") no-repeat;
+	width: 1px;
+	height: 20px;
+	margin: 0 0 0 10px;
+	vertical-align: top;
+}
+
+.header_feedback {
+	vertical-align: top;
+	color: #333;
+}
+
+.header_feedback_ul {
+	list-style: none;
+}
+
+.header_feedback_ul li{
+	margin: 7px 0 0 0;
+	display: list-item;
+}
+
+.header_mail a {
+	color: darkred;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.header_phone {
+	color: darkred;
+	font-size: 20px;
+}
+
+.callback_form_button {
+	border: 1px groove darkred;
+	box-shadow: 1px 1px 10px #ccc;
+	background: aliceblue;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
 }

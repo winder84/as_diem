@@ -1,1 +1,25 @@
 <?php
+echo _open('ul.header_ul');
+	echo _open('li');
+		echo _link('/')->text(_media('logo_tech.png')->width(250));
+		echo _tag('p.logo_title', _link('/')->text('ООО "Представительство технологий"'));
+	echo _close('li');
+	echo _open('li.header_menu_li');
+		echo _open('ul.header_menu');
+			echo _tag('li', _link('/')->text('О компании'));
+			echo _tag('div.menu_delimer');
+			echo _tag('li', _link('/')->text('Спецпредложения'));
+			echo _tag('div.menu_delimer');
+			echo _tag('li', _link('/')->text('Контакты'));
+		echo _close('ul');
+	echo _close('li');
+	echo _open('li.header_feedback');
+		echo _open('ul.header_feedback_ul');
+			echo _tag('li.header_mail', 'E-mail: <a href="mailto:tech@kmv.ru">tech@kmv.ru</a>');
+			echo _tag('li', array('style' => 'text-align: center;'), 'Звоните нам:');
+			echo _tag('li.header_phone', '+7(999)999-99-99, +7(999)999-99-99');
+			echo _tag('li', array('style' => 'text-align: center;'), 'или');
+			echo _tag('li.callback_form_button', 'Оставьте номер и мы вам перезвоним');
+		echo _close('ul');
+	echo _close('li');
+echo _close('ul');
