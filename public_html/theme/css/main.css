@@ -40,7 +40,8 @@ h4 {
 
 .header_ul {
 	list-style: none;
-	margin: 10px;
+	margin: 10px 30px;
+	padding: 0;
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-size: 14px;
 }
@@ -110,7 +111,6 @@ h4 {
 .header_mail a {
 	color: darkred;
 	font-size: 16px;
-	font-weight: bold;
 }
 
 .header_phone {
@@ -119,12 +119,36 @@ h4 {
 }
 
 .callback_form_button {
-	border: 1px groove darkred;
-	box-shadow: 1px 1px 10px #ccc;
-	background: aliceblue;
-	padding: 10px;
+	border: 1px groove grey;
+	background: azure;
+	padding: 5px;
 	text-align: center;
 	font-weight: bold;
 	cursor: pointer;
 	border-radius: 5px;
+}
+
+.header_categories_menu {
+	margin: 0;
+	padding: 40px 0 0 15px;
+	height: 117px;
+	width: 100%;
+	background: url("../images/header_categories_bg.png") no-repeat;
+}
+
+.header_categories_menu li {
+	margin-left: 20px;
+}
+
+.category_name_link {
+	margin: 0;
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.category_name_link a {
+	text-decoration: none;
+	color: #333;
 }
