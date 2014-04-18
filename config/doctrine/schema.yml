@@ -1,0 +1,50 @@
+Category:
+  columns:
+    title:            { type: string(255), notnull: true }
+    prevdescription:  { type: string(255) }
+    description:      { type: clob, extra: markdown }
+    image_id:         { type: integer }
+    sort:             { type: integer }
+    activity:         { type: integer }
+  relations:
+    Image:
+      class:      DmMedia
+      local:      image_id
+      onDelete:   RESTRICT
+
+Mark:
+  columns:
+    title:             { type: string(255), notnull: true }
+    prevdescription:   { type: string(255) }
+    description:       { type: clob, extra: markdown }
+    image_id:          { type: integer }
+    sort:              { type: integer }
+    activity:          { type: integer }
+  relations:
+    Image:
+      class:      DmMedia
+      local:      image_id
+      onDelete:   RESTRICT
+
+Product:
+  columns:
+    title:             { type: string(255), notnull: true }
+    prevdescription:   { type: string(255) }
+    description:       { type: clob, extra: markdown }
+    image_id:          { type: integer }
+    sort:              { type: integer }
+    activity:          { type: enum, values: [0, 1] }
+    category_id:       { type: integer, notnull: true }
+    mark_id:           { type: integer, notnull: true }
+    cost:              { type: integer }
+    isonslider:        { type: integer }
+    isnew:             { type: integer }
+  relations:
+    Category:
+      foreignAlias:   Products
+    Mark:
+      foreignAlias:   Products
+    Image:
+      class:      DmMedia
+      local:      image_id
+      onDelete:   RESTRICT

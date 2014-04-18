@@ -6,3 +6,31 @@ Content:
       components:
         header:
         footer:
+
+  Avtoservice:
+    category:
+      model:                  Category
+      page:                   true
+      name:                   Категория|Категории
+      components:
+        list:
+        show:
+
+    mark:
+      model:                  Mark
+      page:                   true
+      name:                   Фирма|Фирмы
+      components:
+        list:
+        show:
+
+    product:
+      parent:                 category
+      page:                   true
+      name:                   Оборудование|Оборудование
+      components:
+        listByCategory:
+          filters:            [ category ]
+        listByMark:
+          filters:            [ mark ]
+        show:
