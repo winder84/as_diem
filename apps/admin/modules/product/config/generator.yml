@@ -1,0 +1,54 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Product
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: product
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=title'
+          - category_id
+          - mark_id
+          - image_id
+          - prevdescription
+          - description
+          - sort
+          - activity
+          - cost
+          - isonslider
+          - isnew
+        sort:
+          - title
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - title
+          - prevdescription
+          - description
+          - image_id
+          - sort
+          - activity
+          - category_id
+          - mark_id
+          - cost
+          - isonslider
+          - isnew
+      form:
+        display:
+          NONE: [title, category_id, mark_id]
+          Image: [image_id_form, image_id_view]
+          Description: [description]
+          Others: [prevdescription, sort, activity, cost, isonslider, isnew]
+        class: ProductAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

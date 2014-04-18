@@ -14,25 +14,34 @@
  * @property integer $size
  * @property string $dimensions
  * @property DmMediaFolder $Folder
+ * @property Doctrine_Collection $Category
+ * @property Doctrine_Collection $Mark
+ * @property Doctrine_Collection $Product
  * 
- * @method integer       getDmMediaFolderId()    Returns the current record's "dm_media_folder_id" value
- * @method string        getFile()               Returns the current record's "file" value
- * @method string        getLegend()             Returns the current record's "legend" value
- * @method string        getAuthor()             Returns the current record's "author" value
- * @method string        getLicense()            Returns the current record's "license" value
- * @method string        getMime()               Returns the current record's "mime" value
- * @method integer       getSize()               Returns the current record's "size" value
- * @method string        getDimensions()         Returns the current record's "dimensions" value
- * @method DmMediaFolder getFolder()             Returns the current record's "Folder" value
- * @method DmMedia       setDmMediaFolderId()    Sets the current record's "dm_media_folder_id" value
- * @method DmMedia       setFile()               Sets the current record's "file" value
- * @method DmMedia       setLegend()             Sets the current record's "legend" value
- * @method DmMedia       setAuthor()             Sets the current record's "author" value
- * @method DmMedia       setLicense()            Sets the current record's "license" value
- * @method DmMedia       setMime()               Sets the current record's "mime" value
- * @method DmMedia       setSize()               Sets the current record's "size" value
- * @method DmMedia       setDimensions()         Sets the current record's "dimensions" value
- * @method DmMedia       setFolder()             Sets the current record's "Folder" value
+ * @method integer             getDmMediaFolderId()    Returns the current record's "dm_media_folder_id" value
+ * @method string              getFile()               Returns the current record's "file" value
+ * @method string              getLegend()             Returns the current record's "legend" value
+ * @method string              getAuthor()             Returns the current record's "author" value
+ * @method string              getLicense()            Returns the current record's "license" value
+ * @method string              getMime()               Returns the current record's "mime" value
+ * @method integer             getSize()               Returns the current record's "size" value
+ * @method string              getDimensions()         Returns the current record's "dimensions" value
+ * @method DmMediaFolder       getFolder()             Returns the current record's "Folder" value
+ * @method Doctrine_Collection getCategory()           Returns the current record's "Category" collection
+ * @method Doctrine_Collection getMark()               Returns the current record's "Mark" collection
+ * @method Doctrine_Collection getProduct()            Returns the current record's "Product" collection
+ * @method DmMedia             setDmMediaFolderId()    Sets the current record's "dm_media_folder_id" value
+ * @method DmMedia             setFile()               Sets the current record's "file" value
+ * @method DmMedia             setLegend()             Sets the current record's "legend" value
+ * @method DmMedia             setAuthor()             Sets the current record's "author" value
+ * @method DmMedia             setLicense()            Sets the current record's "license" value
+ * @method DmMedia             setMime()               Sets the current record's "mime" value
+ * @method DmMedia             setSize()               Sets the current record's "size" value
+ * @method DmMedia             setDimensions()         Sets the current record's "dimensions" value
+ * @method DmMedia             setFolder()             Sets the current record's "Folder" value
+ * @method DmMedia             setCategory()           Sets the current record's "Category" collection
+ * @method DmMedia             setMark()               Sets the current record's "Mark" collection
+ * @method DmMedia             setProduct()            Sets the current record's "Product" collection
  * 
  * @package    tambuel-sochi
  * @subpackage model
@@ -101,6 +110,18 @@ abstract class BaseDmMedia extends myDoctrineRecord
              'local' => 'dm_media_folder_id',
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
+
+        $this->hasMany('Category', array(
+             'local' => 'id',
+             'foreign' => 'image_id'));
+
+        $this->hasMany('Mark', array(
+             'local' => 'id',
+             'foreign' => 'image_id'));
+
+        $this->hasMany('Product', array(
+             'local' => 'id',
+             'foreign' => 'image_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
