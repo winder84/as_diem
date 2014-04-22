@@ -3,6 +3,7 @@
  * Категория components
  * 
  * No redirection nor database manipulation ( insert, update, delete ) here
+ * 
  */
 class categoryComponents extends myFrontModuleComponents
 {
@@ -19,6 +20,13 @@ class categoryComponents extends myFrontModuleComponents
     $query = $this->getShowQuery();
     
     $this->category = $this->getRecord($query);
+  }
+
+  public function executeListByCategory()
+  {
+    $query = $this->getListQuery();
+    
+    $this->categoryPager = $this->getPager($query);
   }
 
 

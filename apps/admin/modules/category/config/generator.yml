@@ -13,6 +13,7 @@ generator:
       list:
         display:
           - '=title'
+          - category_id
           - image_id
           - products_list
           - prevdescription
@@ -35,7 +36,7 @@ generator:
           - activity
       form:
         display:
-          NONE: [title]
+          NONE: [title, category_id]
           Image: [image_id_form, image_id_view]
           Description: [description]
           Оборудование: [products_list]

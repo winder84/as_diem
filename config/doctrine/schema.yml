@@ -6,7 +6,10 @@ Category:
     image_id:         { type: integer }
     sort:             { type: integer }
     activity:         { type: integer }
+    category_id:      { type: integer }
   relations:
+    Category:
+      foreignAlias:   Categories
     Image:
       class:      DmMedia
       local:      image_id
