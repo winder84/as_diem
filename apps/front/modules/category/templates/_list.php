@@ -6,13 +6,13 @@ foreach ($categoryPager as $category) {
 	}
 }
 
-foreach ($parentCategories as $pCat) {
-	echo _open('div.pCat#pCat_' . $category->category_id);
+foreach ($parentCategories as $key => $pCat) {
+	echo _open('div.pCat#pCat_' . $key);
 		echo _open('ul.hiddenDiv');
 			foreach ($pCat as $chCat) {
 				echo _open('li');
-				echo _link($chCat)->text(_media($chCat->Image)->width(90));
-				echo _tag('p.category_name_link', _link($chCat)->text($chCat));
+					echo _link($chCat)->text(_media($chCat->Image)->width(90));
+					echo _tag('p.category_name_link', _link($chCat)->text($chCat));
 				echo _close('li');
 			}
 		echo _close('ul.hiddenDiv');
@@ -29,25 +29,21 @@ foreach ($parentCategories as $pCat) {
 						echo _tag('p', $category);
 					echo _close('div');
 					echo _open('div.cats');
-//						echo _open('li');
-//							echo _media($category->Image)->width(90);
-//							echo _tag('p.category_name_link', $category);
-//						echo _close('li');
-							foreach ($parentCategories[$category->id] as $cKey => $childCategory) {
-								if ($cKey <= 7) {
-									if (array_key_exists($childCategory->id, $parentCategories)) {
-										echo _open('li.pCatBtn', array('pcatbtnid' => $category->id));
-										echo _media($childCategory->Image)->width(90);
-										echo _tag('p.category_name_link', $childCategory);
-										echo _close('li');
-									} else {
-										echo _open('li');
-										echo _link($childCategory)->text(_media($childCategory->Image)->width(90));
-										echo _tag('p.category_name_link', _link($childCategory)->text($childCategory));
-										echo _close('li');
-									}
+						foreach ($parentCategories[$category->id] as $cKey => $childCategory) {
+							if ($cKey <= 7) {
+								if (array_key_exists($childCategory->id, $parentCategories)) {
+									echo _open('li.pCatBtn', array('pcatbtnid' => $childCategory->id));
+									echo _media($childCategory->Image)->width(90);
+									echo _tag('p.category_name_link', $childCategory);
+									echo _close('li');
+								} else {
+									echo _open('li');
+									echo _link($childCategory)->text(_media($childCategory->Image)->width(90));
+									echo _tag('p.category_name_link', _link($childCategory)->text($childCategory));
+									echo _close('li');
 								}
 							}
+						}
 					echo _close('div');
 				echo _close('ul');
 			} else {

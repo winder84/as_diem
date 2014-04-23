@@ -11,7 +11,7 @@ $('.pCat').dialog({
 	autoOpen: false,
 	modal: true,
 	closeOnEscape: true,
-	title: "Выберите категорию"
+	title: "Выберите подкатегорию"
 });
 $('.pCatBtn').click(function() {
 	$( "#pCat_" + $(this).attr('pcatbtnid') ).dialog( "open" );
