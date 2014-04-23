@@ -18,7 +18,8 @@ $('.pCatBtn').click(function() {
 });
 
 $('.header_categories_menu').on('click', function(){
-	$(this).children('.mainCategoryTitle').toggle(5);
-	$(this).children('.cats').toggle( "slide", 200 );
-}
+		$(this).children('.mainCategoryTitle').toggle(50);
+		$(this).children('.cats').toggle( "slide", 200 );
+	}
 );
+
