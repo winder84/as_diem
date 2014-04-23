@@ -5,6 +5,9 @@
 
 })(jQuery);
 $('.pCat').dialog({
+	width: 700,
+	minHeight: 200,
+	resizable: false,
 	autoOpen: false,
 	modal: true,
 	closeOnEscape: true,
@@ -14,13 +17,8 @@ $('.pCatBtn').click(function() {
 	$( "#pCat_" + $(this).attr('pcatbtnid') ).dialog( "open" );
 });
 
-$('.header_categories_menu').hover(function(){
-	$(this).children('p.mainCategoryTitle').hide(5, function() {
-		$(this).parent('ul').children('.cats').show( "bounce", 100 );
-	});
-}, function(){
-		$(this).children('.cats').hide(5, function() {
-			$(this).parent('ul').children('p.mainCategoryTitle').show(5);
-		} );
-	}
+$('.header_categories_menu').on('click', function(){
+	$(this).children('.mainCategoryTitle').toggle(5);
+	$(this).children('.cats').toggle( "slide", 200 );
+}
 );

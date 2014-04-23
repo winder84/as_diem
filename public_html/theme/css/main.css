@@ -131,14 +131,18 @@ h4 {
 }
 
 .header_categories_menu {
-	margin: 0 auto;
+	cursor: pointer;
+	margin: 10px auto;
 	padding: 10px 0 0 0;
 	height: 117px;
 	width: 940px;
 	background: url("../images/header_categories_bg.png") -10px 0px no-repeat;
 	box-shadow: 1px 1px 5px #ccc;
-	margin-bottom: 10px;
 	text-align: center;
+}
+
+.header_categories_menu:hover {
+	box-shadow: 1px 1px 5px darkred;
 }
 
 .header_categories_menu li {
@@ -171,16 +175,37 @@ h4 {
 }
 
 .mainCategoryTitle {
+	height: 116px;
+	position: absolute;
+	margin: 0 0 0 250px;
+}
+
+.mainCategoryTitle img {
+	margin: 20px 0 0 0;
 	display: inline-block;
-	margin: 40px 0 0 0;
+}
+
+.mainCategoryTitle p {
+	margin: 20px 0 0 0;
+	width: 300px;
+	display: inline-block;
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-style: italic;
 	color: indianred;
 	font-size: 28px;
+	vertical-align: top;
 }
 
 .cats {
 	display: none;
 	margin-top: 10px;
 	height: 116px;
+}
+
+.hiddenDiv {
+	list-style: none;
+}
+
+.hiddenDiv li {
+	display: inline-block;
 }
