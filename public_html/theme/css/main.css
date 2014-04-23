@@ -223,6 +223,14 @@ h4 {
 	height: 116px;
 }
 
+.cats li {
+	vertical-align: top;
+}
+
+.cats li:hover p, .cats li:hover a {
+	color: darkred;
+}
+
 .hiddenDiv {
 	list-style: none;
 }
