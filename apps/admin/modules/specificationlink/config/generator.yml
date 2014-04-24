@@ -1,0 +1,38 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Specificationlink
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: specificationlink
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=id'
+          - specification_id
+          - product_id
+          - value
+        sort:
+          - id
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - id
+          - specification_id
+          - product_id
+          - value
+      form:
+        display:
+          NONE: [specification_id, product_id]
+          Others: [value]
+        class: SpecificationlinkAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

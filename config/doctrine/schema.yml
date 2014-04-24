@@ -5,7 +5,7 @@ Category:
     description:      { type: clob, extra: markdown }
     image_id:         { type: integer }
     sort:             { type: integer }
-    activity:          { type: enum, values: [0, 1] }
+    activity:         { type: enum, values: [0, 1] }
     category_id:      { type: integer }
   relations:
     Category:
@@ -51,3 +51,33 @@ Product:
       class:      DmMedia
       local:      image_id
       onDelete:   RESTRICT
+
+Specification:
+  columns:
+    title:             { type: string(255), notnull: true }
+    measure:           { type: string(255), notnull: true }
+
+Specificationlink:
+  columns:
+    specification_id:  { type: integer, notnull: true }
+    product_id:        { type: integer, notnull: true }
+    value:             { type: float, notnull: true }
+  relations:
+    Specification:
+      foreignAlias:   Specificationlinks
+    Product:
+      foreignAlias:   Specificationlinks
+
+Tag:
+  columns:
+    title:             { type: string(255), notnull: true }
+
+Taglink:
+  columns:
+    tag_id:            { type: integer, notnull: true }
+    product_id:        { type: integer, notnull: true }
+  relations:
+    Tag:
+      foreignAlias:   Taglinks
+    Product:
+      foreignAlias:   Taglinks

@@ -1,0 +1,36 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Specification
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: specification
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=title'
+          - specificationlinks_list
+          - measure
+        sort:
+          - title
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - title
+          - measure
+      form:
+        display:
+          NONE: [title]
+          'Связи характеристик': [specificationlinks_list]
+          Others: [measure]
+        class: SpecificationAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

@@ -36,3 +36,23 @@ Content:
         listByMark:
           filters:            [ mark ]
         show:
+
+    specification:
+      model:                  Specification
+      name:                   Характеристика|Характеристики
+      components:
+
+    specificationlink:
+      model:                  Specificationlink
+      name:                   Связь характеристики|Связи характеристик
+      components:
+
+    tag:
+      model:                  Tag
+      name:                   Тег|Теги
+      components:
+
+    taglink:
+      model:                  Taglink
+      name:                   Связь тегов|Связи тегов
+      components:
