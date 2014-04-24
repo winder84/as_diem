@@ -160,6 +160,7 @@ h4 {
 	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	box-shadow:0 0 15px rgba(0,0,0,0.6);
+	background: #fff;
 }
 
 .header_categories_menu:hover {

@@ -5,6 +5,7 @@
 
 })(jQuery);
 $('.pCat').dialog({
+	position: { my: "center", at: "center", of: window },
 	width: 700,
 	minHeight: 200,
 	resizable: false,
