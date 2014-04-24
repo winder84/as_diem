@@ -1,7 +1,7 @@
 .dm_layout {
   width: 1248px;
   margin: auto;
-	background: #fff;
+	background: url("../images/bg.jpg");
 	box-shadow: 1px 1px 10px #999;
 }
 

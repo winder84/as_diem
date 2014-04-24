@@ -59,7 +59,7 @@ h4 {
 
 .logo_title a {
 	text-decoration: none;
-	color: #333;
+	color: #fff;
 }
 
 .header_menu_li {
@@ -80,7 +80,7 @@ h4 {
 
 .header_menu li a {
 	text-decoration: none;
-	color: #777;
+	color: #fff;
 }
 
 .header_menu li a:hover {
@@ -98,7 +98,7 @@ h4 {
 .header_feedback {
 	margin-left: 110px;
 	vertical-align: top;
-	color: #333;
+	color: #fff;
 }
 
 .header_feedback_ul {
@@ -111,12 +111,12 @@ h4 {
 }
 
 .header_mail a {
-	color: darkred;
+	color: red;
 	font-size: 16px;
 }
 
 .header_phone {
-	color: darkred;
+	color: red;
 	font-size: 20px;
 }
 
@@ -132,14 +132,15 @@ h4 {
 	bottom:10px;
 	left:0;
 	right:50%;
+	color: darkred;
 	-moz-border-radius:10px / 100px;
-	box-shadow: 1px 1px 5px #ccc;
-}
-
-.callback_form_button:hover {
 	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
+
+.callback_form_button:hover {
+	box-shadow: 1px 1px 5px #ccc;
 }
 
 .header_categories_menu {
@@ -149,7 +150,6 @@ h4 {
 	height: 117px;
 	width: 940px;
 	background: url("../images/header_categories_bg.png") -10px 0px no-repeat;
-	box-shadow: 1px 1px 5px #ccc;
 	text-align: center;
 	top:10px;
 	bottom:10px;
@@ -157,12 +157,13 @@ h4 {
 	right:50%;
 		-moz-border-radius:10px / 100px;
 	border-radius:10px / 100px;
-}
-
-.header_categories_menu:hover {
 	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	-moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
 	box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
+
+.header_categories_menu:hover {
+	box-shadow: 1px 1px 15px #ccc;
 }
 
 .header_categories_menu li {
