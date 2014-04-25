@@ -19,7 +19,7 @@ echo _open('ul.header_ul');
 			echo _tag('li', array('style' => 'text-align: center;'), 'Звоните нам:');
 			echo _tag('li.header_phone', '+7(999)999-99-99, +7(999)999-99-99');
 			echo _tag('li', array('style' => 'text-align: center;'), 'или');
-			echo _tag('li.callback_form_button', 'Оставьте номер и мы вам перезвоним');
+			echo _tag('li.callback_form_button#callback_form_button', 'Оставьте свои контакты и мы с Вами свяжемся');
 		echo _close('ul');
 	echo _close('li');
 echo _close('ul');

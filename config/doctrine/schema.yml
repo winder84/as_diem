@@ -1,7 +1,7 @@
 Category:
   columns:
     title:            { type: string(255), notnull: true }
-    prevdescription:  { type: string(255) }
+    prevdescription:  { type: clob, extra: markdown }
     description:      { type: clob, extra: markdown }
     image_id:         { type: integer }
     sort:             { type: integer }
@@ -18,7 +18,7 @@ Category:
 Mark:
   columns:
     title:             { type: string(255), notnull: true }
-    prevdescription:   { type: string(255) }
+    prevdescription:   { type: clob, extra: markdown }
     description:       { type: clob, extra: markdown }
     image_id:          { type: integer }
     sort:              { type: integer }
@@ -32,7 +32,7 @@ Mark:
 Product:
   columns:
     title:             { type: string(255), notnull: true }
-    prevdescription:   { type: string(255) }
+    prevdescription:   { type: clob, extra: markdown }
     description:       { type: clob, extra: markdown }
     image_id:          { type: integer }
     sort:              { type: integer }
@@ -81,3 +81,12 @@ Taglink:
       foreignAlias:   Taglinks
     Product:
       foreignAlias:   Taglinks
+
+Contact:
+  actAs:              [ Timestampable ]
+  columns:
+    name:             { type: string(255), notnull: true }
+    email:            { type: string(255), notnull: true }
+    phone:            { type: string(255), notnull: true }
+    topic:            { type: string(255) }
+    body:             { type: clob }
