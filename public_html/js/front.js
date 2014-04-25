@@ -6,7 +6,8 @@
 })(jQuery);
 
 $('.pCat').dialog({
-	position: { my: "center", at: "center", of: window },
+	position: { my: "center", at: "top", of: window },
+	draggable: false,
 	width: 700,
 	minHeight: 200,
 	resizable: false,
@@ -17,7 +18,8 @@ $('.pCat').dialog({
 });
 
 $('.contactForm').dialog({
-	position: { my: "center", at: "center", of: window },
+	position: { my: "center", at: "top", of: window },
+	draggable: false,
 	width: 700,
 	minHeight: 200,
 	resizable: false,
