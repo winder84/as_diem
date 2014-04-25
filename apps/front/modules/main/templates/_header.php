@@ -6,6 +6,8 @@ echo _open('ul.header_ul');
 	echo _close('li');
 	echo _open('li.header_menu_li');
 		echo _open('ul.header_menu');
+			echo _tag('li', _link('/')->text('Главная'));
+			echo _tag('div.menu_delimer');
 			echo _tag('li', _link('/')->text('О компании'));
 			echo _tag('div.menu_delimer');
 			echo _tag('li', _link('/')->text('Спецпредложения'));
