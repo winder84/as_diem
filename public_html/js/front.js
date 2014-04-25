@@ -24,7 +24,7 @@ $('.contactForm').dialog({
 	autoOpen: false,
 	modal: true,
 	closeOnEscape: true,
-	title: "Оставьте свой номер и мы вам перезвоним",
+	title: "Оставьте свои контакты и мы с Вами свяжемся",
 	buttons: [
 		{
 			text: "Отправить",
