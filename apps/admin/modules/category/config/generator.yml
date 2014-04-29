@@ -17,7 +17,7 @@ generator:
           - image_id
           - description
           - sort
-          - activity
+          - is_active
         sort:
           - title
           - asc
@@ -31,14 +31,14 @@ generator:
           - description
           - image_id
           - sort
-          - activity
+          - is_active
       form:
         display:
           NONE: [title, category_id]
           Image: [image_id_form, image_id_view]
           Description: [description]
           Оборудование: [products_list]
-          Others: [prevdescription, sort, activity]
+          Others: [prevdescription, sort, is_active]
         class: CategoryAdminForm
         fields: {  }
       edit: ~

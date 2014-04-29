@@ -18,7 +18,7 @@ generator:
           - image_id
           - description
           - sort
-          - activity
+          - is_active
           - cost
           - isonslider
           - isnew
@@ -35,7 +35,7 @@ generator:
           - description
           - image_id
           - sort
-          - activity
+          - is_active
           - category_id
           - mark_id
           - cost
@@ -46,7 +46,7 @@ generator:
           NONE: [title, category_id, mark_id]
           Image: [image_id_form, image_id_view]
           Description: [description]
-          Others: [prevdescription, sort, activity, cost, isonslider, isnew]
+          Others: [prevdescription, sort, is_active, cost, isonslider, isnew]
         class: ProductAdminForm
         fields: {  }
       edit: ~

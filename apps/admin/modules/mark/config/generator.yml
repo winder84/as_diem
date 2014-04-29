@@ -17,7 +17,7 @@ generator:
           - products_list
           - description
           - sort
-          - activity
+          - is_active
         sort:
           - title
           - asc
@@ -31,14 +31,14 @@ generator:
           - description
           - image_id
           - sort
-          - activity
+          - is_active
       form:
         display:
           NONE: [title]
           Image: [image_id_form, image_id_view]
           Description: [description]
           Оборудование: [products_list]
-          Others: [prevdescription, sort, activity]
+          Others: [prevdescription, sort, is_active]
         class: MarkAdminForm
         fields: {  }
       edit: ~
