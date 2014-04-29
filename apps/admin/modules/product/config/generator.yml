@@ -16,7 +16,6 @@ generator:
           - category_id
           - mark_id
           - image_id
-          - prevdescription
           - description
           - sort
           - activity

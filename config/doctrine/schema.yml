@@ -5,7 +5,7 @@ Category:
     description:      { type: clob, extra: markdown }
     image_id:         { type: integer }
     sort:             { type: integer }
-    activity:         { type: enum, values: [0, 1] }
+    activity:         { type: boolean, notnull: true, default:true}
     category_id:      { type: integer }
   relations:
     Category:
@@ -22,7 +22,7 @@ Mark:
     description:       { type: clob, extra: markdown }
     image_id:          { type: integer }
     sort:              { type: integer }
-    activity:          { type: enum, values: [0, 1] }
+    activity:          { type: boolean, notnull: true, default:true}
   relations:
     Image:
       class:      DmMedia
@@ -36,12 +36,12 @@ Product:
     description:       { type: clob, extra: markdown }
     image_id:          { type: integer }
     sort:              { type: integer }
-    activity:          { type: enum, values: [0, 1] }
+    activity:          { type: boolean, notnull: true, default:true}
     category_id:       { type: integer, notnull: true }
     mark_id:           { type: integer, notnull: true }
     cost:              { type: integer }
-    isonslider:        { type: enum, values: [0, 1] }
-    isnew:             { type: enum, values: [0, 1] }
+    isonslider:        { type: boolean, notnull: true, default:false}
+    isnew:             { type: boolean, notnull: true, default:false}
   relations:
     Category:
       foreignAlias:   Products

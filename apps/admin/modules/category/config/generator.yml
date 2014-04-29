@@ -15,8 +15,6 @@ generator:
           - '=title'
           - category_id
           - image_id
-          - products_list
-          - prevdescription
           - description
           - sort
           - activity
