@@ -9,11 +9,13 @@ generator:
     with_doctrine_route: false
     config:
       actions: ~
-      fields: {  }
+      fields:
+        product_list:
+          label: Оборудование
       list:
         display:
           - '=title'
-          - specificationlinks_list
+          - product_list
           - measure
         sort:
           - title
@@ -28,7 +30,7 @@ generator:
       form:
         display:
           NONE: [title]
-          'Связи характеристик': [specificationlinks_list]
+          Оборудование: [product_list]
           Others: [measure]
         class: SpecificationAdminForm
         fields: {  }

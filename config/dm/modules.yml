@@ -33,6 +33,10 @@ Content:
       components:
         listByCategory:
           filters:            [ category ]
+        listByTag:
+          filters:            [ tag ]
+        listBySpecification:
+          filters:            [ specification ]
         listByMark:
           filters:            [ mark ]
         show:
@@ -41,6 +45,7 @@ Content:
       model:                  Specification
       name:                   Характеристика|Характеристики
       components:
+        list:
 
     specificationlink:
       model:                  Specificationlink
@@ -51,11 +56,7 @@ Content:
       model:                  Tag
       name:                   Тег|Теги
       components:
-
-    taglink:
-      model:                  Taglink
-      name:                   Связь тегов|Связи тегов
-      components:
+        list:
 
   Feedback:              # arbitrary namespace, used in admin content menu
     contact:             # module's name

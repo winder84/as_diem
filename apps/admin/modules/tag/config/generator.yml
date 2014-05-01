@@ -9,11 +9,13 @@ generator:
     with_doctrine_route: false
     config:
       actions: ~
-      fields: {  }
+      fields:
+        product_list:
+          label: Оборудование
       list:
         display:
           - '=title'
-          - taglinks_list
+          - product_list
         sort:
           - title
           - asc
@@ -26,7 +28,7 @@ generator:
       form:
         display:
           NONE: [title]
-          'Связи тегов': [taglinks_list]
+          Оборудование: [product_list]
         class: TagAdminForm
         fields: {  }
       edit: ~

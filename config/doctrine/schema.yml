@@ -52,6 +52,16 @@ Product:
       class:      DmMedia
       local:      image_id
       onDelete:   RESTRICT
+    Tag:
+      class: Tag
+      refClass: Taglink
+      local: product_id
+      foreign: tag_id
+    Specification:
+      class: Specification
+      refClass: Specificationlink
+      local: product_id
+      foreign: specification_id
 
 Specification:
   columns:

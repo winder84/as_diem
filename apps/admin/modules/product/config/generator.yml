@@ -10,6 +10,10 @@ generator:
     config:
       actions: ~
       fields:
+        tag_list:
+          label: Теги
+        specification_list:
+          label: Характеристики
         is_active:
           label: Active
       list:
@@ -48,7 +52,7 @@ generator:
           Image: [image_id_form, image_id_view]
           Prevdescription: [prevdescription]
           Description: [description]
-          'Связи': [specificationlinks_list, taglinks_list]
+          Теги и Характеристики: [tag_list, specification_list]
           Others: [sort, cost]
         class: ProductAdminForm
         fields: {  }
