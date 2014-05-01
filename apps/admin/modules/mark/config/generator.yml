@@ -9,12 +9,15 @@ generator:
     with_doctrine_route: false
     config:
       actions: ~
-      fields: {  }
+      fields:
+        is_active:
+          label: Active
       list:
         display:
           - '=title'
           - image_id
           - products_list
+          - country
           - description
           - sort
           - is_active
@@ -27,18 +30,20 @@ generator:
       filter:
         display:
           - title
+          - is_active
+          - country
           - prevdescription
           - description
           - image_id
           - sort
-          - is_active
       form:
         display:
-          NONE: [title]
+          NONE: [title, is_active]
           Image: [image_id_form, image_id_view]
+          Prevdescription: [prevdescription]
           Description: [description]
           Оборудование: [products_list]
-          Others: [prevdescription, sort, is_active]
+          Others: [country, sort]
         class: MarkAdminForm
         fields: {  }
       edit: ~

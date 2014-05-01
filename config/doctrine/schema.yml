@@ -18,6 +18,7 @@ Category:
 Mark:
   columns:
     title:             { type: string(255), notnull: true }
+    country:           { type: string(255), notnull: true }
     prevdescription:   { type: clob, extra: markdown }
     description:       { type: clob, extra: markdown }
     image_id:          { type: integer }

@@ -9,12 +9,15 @@ generator:
     with_doctrine_route: false
     config:
       actions: ~
-      fields: {  }
+      fields:
+        is_active:
+          label: Active
       list:
         display:
           - '=title'
           - category_id
           - image_id
+          - categories_list
           - description
           - sort
           - is_active
@@ -27,18 +30,21 @@ generator:
       filter:
         display:
           - title
+          - is_active
           - prevdescription
           - description
           - image_id
           - sort
-          - is_active
+          - category_id
       form:
         display:
-          NONE: [title, category_id]
+          NONE: [title, is_active, category_id]
           Image: [image_id_form, image_id_view]
+          Prevdescription: [prevdescription]
           Description: [description]
+          Категории: [categories_list]
           Оборудование: [products_list]
-          Others: [prevdescription, sort, is_active]
+          Others: [sort]
         class: CategoryAdminForm
         fields: {  }
       edit: ~

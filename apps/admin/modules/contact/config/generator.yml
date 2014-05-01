@@ -13,12 +13,10 @@ generator:
       list:
         display:
           - created_at
-          - updated_at
           - '=name'
           - email
           - phone
           - topic
-          - body
         sort:
           - created_at
           - desc
