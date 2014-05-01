@@ -2,13 +2,13 @@
 
 echo $tagPager->renderNavigationTop();
 
-echo _open('ul.elements');
+echo _open('ul.tags_ul');
 
 foreach ($tagPager as $tag)
 {
-  echo _open('li.element');
+  echo _open('li.tags_li');
 
-    echo $tag;
+    echo _link($tag)->text($tag);
 
   echo _close('li');
 }

@@ -55,6 +55,7 @@ Content:
     tag:
       model:                  Tag
       name:                   Тег|Теги
+      page:                   true
       components:
         list:
 

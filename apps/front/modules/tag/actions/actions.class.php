@@ -1,6 +1,6 @@
 <?php
 /**
- * Тэг actions
+ * Тег actions
  */
 class tagActions extends myFrontModuleActions
 {

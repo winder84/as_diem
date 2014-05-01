@@ -296,3 +296,23 @@ h4 {
 .firm_bg_ul li:hover span {
 	opacity: 1;
 }
+
+.tags_ul {
+	list-style: none;
+	margin: 10px 150px;
+}
+
+.tags_ul li{
+	display: inline-block;
+	margin: 5px 20px;
+}
+
+.tags_ul li a {
+	text-decoration: none;
+	color: #ccc;
+	text-shadow: 1px 1px 5px #000;
+}
+
+.tags_ul li a:hover {
+	text-shadow: 1px 1px 5px #fff;
+}
