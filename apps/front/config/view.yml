@@ -11,7 +11,7 @@ default:
   javascripts:
     - jquery-ui/js/jquery-1.10.2
     - jquery-ui/js/jquery-ui-1.10.4.custom.min
+    - 'http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'
     - front
-
   has_layout:     true
   layout:         layout

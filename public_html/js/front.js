@@ -5,6 +5,15 @@
 
 })(jQuery);
 
+Recaptcha.create("6LfBEfMSAAAAAKnF39Io9RKQ_LIo90ulFTtCcM16",
+	"my_recapcha",
+	{
+		lang : 'ru',
+		theme: "red",
+		callback: Recaptcha.focus_response_field
+	}
+);
+
 $('.pCat').dialog({
 	position: { my: "center", at: "top", of: window },
 	draggable: false,
@@ -41,8 +50,20 @@ $('.contactForm').dialog({
 				if (!$('input[name="contact_form[phone]"]').val()) {
 					toSend = false;
 				}
+				if (!$('#recaptcha_response_field').val()) {
+					toSend = false;
+				}
 				if (toSend) {
-					$('.contact_form').submit();
+					$.post('/capcha/recapcha.verify.php',
+						{ recaptcha_challenge_field: Recaptcha.get_challenge(), recaptcha_response_field: Recaptcha.get_response() },
+						function (data) {
+							if (data == 'recapcha_success') {
+								$('.contact_form').submit();
+							} else {
+								alert("Пожалуйста, введите правильный проверочный код!");
+								Recaptcha.reload();
+							}
+						});
 				} else {
 					alert('Пожалуйста, заполните обязательные поля!');
 				}
@@ -64,4 +85,3 @@ $('.header_categories_menu').on('click', function(){
 		$(this).children('.cats').toggle( "slide", 200 );
 	}
 );
-

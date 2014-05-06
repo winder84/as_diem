@@ -32,6 +32,12 @@ echo _tag('table.contact_form_table',
 			'Сообщение:').
 		_tag('td',
 			$form['body']->field()->error())
+	).
+	_tag('tr',
+		_tag('td',
+			'Проверочный код:').
+		_tag('td',
+			'<div class="my_recapcha" id="my_recapcha"></div>')
 	)
 );
 
