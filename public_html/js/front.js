@@ -94,6 +94,14 @@ $('.contactForm').dialog({
 	]
 });
 
+contactForm.on('submit', function() {
+	if(noBots) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
 $('.pCatBtn').click(function() {
 	$( "#pCat_" + $(this).attr('pcatbtnid') ).dialog( "open" );
 });
