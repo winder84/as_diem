@@ -5,6 +5,40 @@
 
 })(jQuery);
 var noBots = false;
+contactForm = $('.feedback_form');
+contactForm.validate({
+	rules: {
+		"contact_form[name]": {
+			required: true,
+			minlength: 3
+		},
+		"contact_form[email]": {
+			required: true,
+			email: true
+		},
+		"contact_form[phone]": {
+			required: true,
+			minlength: 3,
+			number: true
+		}
+	},
+	messages: {
+		"contact_form[name]": {
+			required: 'Пожалуйста заполните поле!',
+			minlength: 'Минимальная длина поля - 3 символа'
+		},
+		"contact_form[email]": {
+			required: 'Пожалуйста заполните поле!',
+			email: "Формат: name@domain.com"
+		},
+		"contact_form[phone]": {
+			required: 'Пожалуйста заполните поле!',
+			minlength: 'Минимальная длина поля - 3 символа',
+			number: 'Телефон должен состоять из цифр'
+		}
+	}
+});
+
 Recaptcha.create("6LfBEfMSAAAAAKnF39Io9RKQ_LIo90ulFTtCcM16",
 	"my_recapcha",
 	{
@@ -40,46 +74,24 @@ $('.contactForm').dialog({
 		{
 			text: "Отправить",
 			click: function() {
-				var toSend = true;
-				if (!$('input[name="contact_form[name]"]').val()) {
-					toSend = false;
-				}
-				if (!$('input[name="contact_form[email]"]').val()) {
-					toSend = false;
-				}
-				if (!$('input[name="contact_form[phone]"]').val()) {
-					toSend = false;
-				}
-				if (!$('#recaptcha_response_field').val()) {
-					toSend = false;
-				}
-				if (toSend) {
+				if(contactForm.valid()) {
 					$.post('/capcha/recapcha.verify.php',
 						{ recaptcha_challenge_field: Recaptcha.get_challenge(), recaptcha_response_field: Recaptcha.get_response() },
 						function (data) {
 							if (data == 'recapcha_success') {
 								noBots = true;
-								alert("Спасибо! С Вами свяжется наш менеджер!");
-								$('.contact_form').submit();
+								alert("Спасибо! ");
+								contactForm.submit();
 							} else {
 								alert("Пожалуйста, введите правильный проверочный код!");
 								Recaptcha.reload();
 							}
-						});
-				} else {
-					alert('Пожалуйста, заполните обязательные поля!');
+						}
+					);
 				}
 			}
 		}
 	]
-});
-
-$('.contact_form').on('submit', function() {
-	if(noBots) {
-		return true;
-	} else {
-		return false;
-	}
 });
 
 $('.pCatBtn').click(function() {

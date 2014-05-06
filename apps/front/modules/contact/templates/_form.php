@@ -1,7 +1,7 @@
 <?php // Vars: $form
 
 // open the form tag with a contact_form css class
-echo $form->open('.contact_form');
+echo $form->open('.feedback_form');
 echo _tag('table.contact_form_table',
 	_tag('tr',
 		_tag('td',
@@ -40,7 +40,7 @@ echo _tag('table.contact_form_table',
 			'<div class="my_recapcha" id="my_recapcha"></div>')
 	)
 );
-
+echo _tag('div.error', _tag('span'));
 echo $form->renderHiddenFields();
 
 // change the submit button text
