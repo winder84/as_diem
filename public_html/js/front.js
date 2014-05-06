@@ -4,7 +4,7 @@
 	// Here is the entry point for your front javascript
 
 })(jQuery);
-
+var noBots = false;
 Recaptcha.create("6LfBEfMSAAAAAKnF39Io9RKQ_LIo90ulFTtCcM16",
 	"my_recapcha",
 	{
@@ -58,6 +58,8 @@ $('.contactForm').dialog({
 						{ recaptcha_challenge_field: Recaptcha.get_challenge(), recaptcha_response_field: Recaptcha.get_response() },
 						function (data) {
 							if (data == 'recapcha_success') {
+								noBots = true;
+								alert("Спасибо! С Вами свяжется наш менеджер!");
 								$('.contact_form').submit();
 							} else {
 								alert("Пожалуйста, введите правильный проверочный код!");
@@ -70,6 +72,14 @@ $('.contactForm').dialog({
 			}
 		}
 	]
+});
+
+$('.contact_form').on('submit', function() {
+	if(noBots) {
+		return true;
+	} else {
+		return false;
+	}
 });
 
 $('.pCatBtn').click(function() {
