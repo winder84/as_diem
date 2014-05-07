@@ -85,7 +85,7 @@ $('.contactForm').dialog({
 						{ recaptcha_challenge_field: Recaptcha.get_challenge(), recaptcha_response_field: Recaptcha.get_response() },
 						function (data) {
 							if (data == 'recapcha_success') {
-								noBots = true;
+								$('#botScan').val('hjk5u2s6es72cg1s9gmh7p8rs4');
 								alert("Спасибо! ");
 								contactForm.submit();
 							} else {
@@ -98,14 +98,6 @@ $('.contactForm').dialog({
 			}
 		}
 	]
-});
-
-contactForm.on('submit', function() {
-	if(noBots) {
-		return true;
-	} else {
-		return false;
-	}
 });
 
 $('.pCatBtn').click(function() {

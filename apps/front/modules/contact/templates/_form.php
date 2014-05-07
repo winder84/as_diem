@@ -40,7 +40,7 @@ echo _tag('table.contact_form_table',
 			'<div class="my_recapcha" id="my_recapcha"></div>')
 	)
 );
-echo _tag('div.error', _tag('span'));
+echo '<input hidden="hidden" style="display: none;" name="botScan" id="botScan" value="">';
 echo $form->renderHiddenFields();
 
 // change the submit button text
