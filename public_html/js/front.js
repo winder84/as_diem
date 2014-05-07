@@ -20,6 +20,9 @@ contactForm.validate({
 			required: true,
 			minlength: 3,
 			number: true
+		},
+		recaptcha_response_field: {
+			required: true
 		}
 	},
 	messages: {
@@ -35,6 +38,9 @@ contactForm.validate({
 			required: 'Пожалуйста заполните поле!',
 			minlength: 'Минимальная длина поля - 3 символа',
 			number: 'Телефон должен состоять из цифр'
+		},
+		recaptcha_response_field: {
+			required: 'Пожалуйста заполните поле!'
 		}
 	}
 });
