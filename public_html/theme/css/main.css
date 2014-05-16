@@ -336,6 +336,7 @@ h4 {
 }
 
 .productListUl li {
+	line-height: 12px;
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px #333;
 	background: #fff;
