@@ -55,7 +55,7 @@ Recaptcha.create("6LfBEfMSAAAAAKnF39Io9RKQ_LIo90ulFTtCcM16",
 );
 
 $('.pCat').dialog({
-	position: { my: "center", at: "top", of: window },
+	position: { my: "center", at: "center center-20%", of: window },
 	draggable: false,
 	width: 700,
 	minHeight: 200,
@@ -67,7 +67,7 @@ $('.pCat').dialog({
 });
 
 $('.contactForm').dialog({
-	position: { my: "center", at: "top", of: window },
+	position: { my: "center", at: "center center-10%", of: window },
 	draggable: false,
 	width: 700,
 	minHeight: 200,

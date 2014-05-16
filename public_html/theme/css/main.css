@@ -102,6 +102,7 @@ h4 {
 }
 
 .header_feedback_ul {
+	text-align: center;
 	list-style: none;
 }
 
@@ -319,7 +320,7 @@ h4 {
 }
 
 .tags_ul li a:hover {
-	text-shadow: 1px 1px 5px #fff;
+	text-shadow: 1px 1px 3px #999;
 }
 
 .error {
@@ -336,7 +337,7 @@ h4 {
 
 .productListUl li {
 	border-radius: 5px;
-	box-shadow: 1px 1px 10px #ccc;
+	box-shadow: 1px 1px 10px #333;
 	background: #fff;
 	display: inline-block;
 	width: 200px;
@@ -346,10 +347,19 @@ h4 {
 	vertical-align: top;
 }
 
+.productListUl li:hover {
+	box-shadow: 1px 1px 10px #666;
+}
+
+.productListUl li:hover a{
+	color: darkred;
+}
+
 .productListUl li a {
 	height: 30px;
 	font-size: 12px;
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	font-weight: bold;
 	text-decoration: none;
 	color: #333;
 	margin: 5px 0 0 0;
