@@ -388,7 +388,7 @@ h4 {
 
 .productShowTitle {
 	color: darkred;
-	text-shadow: 1px 1px 1px #222;
+	text-shadow: 1px 1px 10px #ddd;
 	text-align: center;
 	font-weight: bold;
 	font-size: 20px;
