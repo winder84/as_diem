@@ -40,8 +40,7 @@ generator:
         display:
           NONE: [title, is_active, category_id]
           Image: [image_id_form, image_id_view]
-          Prevdescription: [prevdescription]
-          Description: [description]
+          Description: [description, prevdescription]
           Категории: [categories_list]
           Оборудование: [products_list]
           Others: [sort]

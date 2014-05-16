@@ -50,8 +50,7 @@ generator:
         display:
           NONE: [title, is_active, isonslider, isnew, category_id, mark_id]
           Image: [image_id_form, image_id_view]
-          Prevdescription: [prevdescription]
-          Description: [description]
+          Description: [description, prevdescription]
           Теги и Характеристики: [tag_list, specification_list]
           Others: [sort, cost]
         class: ProductAdminForm
