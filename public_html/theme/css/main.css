@@ -364,3 +364,40 @@ h4 {
 	color: #333;
 	margin: 5px 0 0 0;
 }
+
+.productShowDiv {
+	color: #333;
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	width: 1200px;
+	margin: 20px auto;
+	padding: 10px;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px groove #000;
+	box-shadow: 1px 1px 10px #333;
+}
+
+.productShowHead div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.productShowTD {
+	width: 700px;
+}
+
+.productShowTitle {
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.productShowPrevdesc {
+	text-align: justify;
+	margin: 0 10px;
+}
+
+.productShowDescription {
+	padding: 20px;
+}
