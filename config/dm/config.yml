@@ -35,3 +35,5 @@ all:
     report_anonymous_data: false         # reports anonymous data about plugins used.
                                         # http://diem-project.org/plugins will show the best plugins based on these reports.
                                         # the report request is sent only once, when a superadministrator logs in.
+  ckeditor:
+      config:
