@@ -1,12 +1,11 @@
 <?php // Vars: $productPager
 
 //echo $productPager->renderNavigationTop();
-
 echo _open('ul.productListUl');
 
 foreach ($productPager as $product)
 {
-	if ($product->isnew) {
+	if ($product->isonslider) {
 		echo _open('li.element');
 
 		echo _link($product)->text(_media($product->Image)->size(190, 130)->method('fit'));

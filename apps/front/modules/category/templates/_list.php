@@ -1,10 +1,14 @@
 <?php // Vars: $categoryPager
 
-//foreach ($categoryPager as $category) {
-//	if ($category->category_id) {
+echo _open('ul.categoryListMenu');
+foreach ($categoryPager as $category) {
+	if (!$category->category_id) {
+		echo _tag('li', _link($category));
 //		$parentCategories[$category->category_id][] = $category;
-//	}
-//}
+	}
+}
+echo _close('ul');
+
 //
 //foreach ($parentCategories as $key => $pCat) {
 //	echo _open('div.pCat#pCat_' . $key);

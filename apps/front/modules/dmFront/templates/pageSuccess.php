@@ -18,7 +18,7 @@
     <div class="dm_layout_center clearfix">
 
       <?php echo $helper->renderArea('left') ?>
-      <?php echo $helper->renderArea('right') ?>
+      <?php echo $helper->renderArea('content') ?>
 
     </div>
 
