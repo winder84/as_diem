@@ -9,8 +9,18 @@
 }
 
 .dm_content {
-  width: 1248px;
-  float: left;
+	width: 890px;
+	float: left;
+}
+
+.dm_layout_left {
+	width: 340px;
+	float: left;
+}
+
+.dm_layout_right {
+	width: 890px;
+	float: left;
 }
 
 .dm_layout_bottom {

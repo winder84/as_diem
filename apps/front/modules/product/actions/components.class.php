@@ -3,6 +3,7 @@
  * Оборудование components
  * 
  * No redirection nor database manipulation ( insert, update, delete ) here
+ * 
  */
 class productComponents extends myFrontModuleComponents
 {
@@ -40,6 +41,13 @@ class productComponents extends myFrontModuleComponents
     $query = $this->getShowQuery();
     
     $this->product = $this->getRecord($query);
+  }
+
+  public function executeListByNew()
+  {
+    $query = $this->getListQuery();
+    
+    $this->productPager = $this->getPager($query);
   }
 
 

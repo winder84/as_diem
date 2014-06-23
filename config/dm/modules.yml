@@ -39,6 +39,7 @@ Content:
           filters:            [ specification ]
         listByMark:
           filters:            [ mark ]
+        listByNew:
         show:
 
     specification:
