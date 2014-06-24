@@ -353,7 +353,7 @@ h4 {
 }
 
 .productListUl li:hover {
-	box-shadow: 1px 1px 10px #666;
+	box-shadow: 1px 1px 15px darkred;
 }
 
 .productListUl li:hover a{
