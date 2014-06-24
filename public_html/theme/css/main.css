@@ -1,5 +1,10 @@
 body {
-	background: lightgray;
+	background-color: #ccc;
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	opacity: .95;
 	margin: 0;
 }
 
@@ -272,9 +277,12 @@ h4 {
 }
 
 .firm_bg {
-	width: 1248px;
+	width: 1200px;
 	height: 109px;
-	background: url("../images/firm_bg.png") no-repeat;
+	/*background: url("../images/firm_bg.png") no-repeat;*/
+	background: #fff;
+	margin: 0 auto;
+	border-radius: 5px;
 	text-align: center;
 }
 
@@ -343,7 +351,7 @@ h4 {
 	line-height: 12px;
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px #333;
-	background: #fff;
+	background: #ccc;
 	display: inline-block;
 	width: 200px;
 	height: 170px;
@@ -361,12 +369,17 @@ h4 {
 }
 
 .productListUl li a {
+	display: block;
 	font-size: 12px;
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 	color: #333;
-	margin: 5px 0 0 0;
+	margin: 0;
+}
+
+.productListUl li a img {
+	border-radius: 5px 5px 0 0;
 }
 
 .productShowDiv {
@@ -425,7 +438,6 @@ h4 {
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-size: 18px;
 	color: darkred;
-	text-shadow: 1px 1px 2px #333;
 	margin: 20px 20px 20px 640px;
 	line-height: 24px;
 }
@@ -462,7 +474,7 @@ h4 {
 .specTable td {
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-style: italic;
-	background: lightblue;
+	background: linear-gradient(to bottom, rgba(218, 218, 218, 1) 0%, rgba(253, 253, 253, 1) 100%);
 	box-shadow: 1px 1px 1px #333;
 	width: 500px;
 	padding: 10px;
@@ -470,7 +482,7 @@ h4 {
 }
 
 .categoryListMenu {
-	margin: 40px 0 40px 0;
+	margin: 10px 0 40px 0;
 	list-style: none;
 }
 
@@ -481,7 +493,7 @@ h4 {
 .categoryListMenu a, .categoryListMenu .dm_current {
 	font-family: Arial;
 	text-shadow: 1px 1px 1px #ccc;
-	border: 1px solid #b8b8b8;
+	border: 1px solid #000;
 	margin-bottom: 2px;
 	background: linear-gradient(to bottom, rgba(218, 218, 218, 1) 0%, rgba(253, 253, 253, 1) 100%);
 	border-radius: 5px;
@@ -515,4 +527,77 @@ h4 {
 	font-size: 14px;
 	line-height: 16px;
 	padding: 6px 14px;
+}
+
+.categoryListMenu a.noLink {
+	background: linear-gradient(to bottom, rgba(200, 200, 200, 1) 0%, rgba(100, 100, 100, 1) 100%);
+	color: #333;
+	text-shadow: 1px 1px 1px #ddd;
+}
+
+.productElementTitle {
+	padding: 20px 0 0 0;
+	margin: -2px 0 0 0;
+	border-radius: 0 0 5px 5px;
+	height: 35px;
+	display: block;
+	background: linear-gradient(to bottom, rgba(253, 253, 253, 1) 0%, rgba(100, 100, 100, 1) 100%);
+	text-shadow: 1px 1px 1px #ddd;
+}
+
+.searchInput {
+	border-radius: 5px;
+	height: 30px;
+	background: linear-gradient(to bottom, rgba(230, 230, 230, 1) 0%, rgba(253, 253, 253, 1) 100%);
+	width: 250px;
+	font-size: 18px;
+	color: #333;
+	font-family: Arial;
+}
+
+.search_form input[type=submit] {
+	width: 37px;
+	height: 36px;
+	border: none;
+	margin: 2px 0 0 5px;
+	cursor: pointer;
+	background: url("../images/searchButton.png") no-repeat;
+}
+
+.search_results h1 {
+	margin: 0 0 0 20px;
+	color: #ddd;
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	font-size: 26px;
+}
+
+.search_form {
+	margin: 40px 0 0 40px;
+}
+
+.search_form input{
+	vertical-align: top;
+}
+
+.search_results {
+	margin: 40px 0 0 20px;
+}
+
+.search_results {
+	color: #ddd;
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+}
+
+.search_result .link {
+	text-decoration: none;
+}
+
+.search_result .link:hover {
+	text-decoration: underline;
+	color: #ddd;
+}
+
+.search_result .page_name {
+	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
+	color: #ddd;
 }

@@ -17,7 +17,7 @@ echo _open('div.productShowDiv');
 //	echo _tag('div.productHorDelimer');
 	echo _open('div.productShowBody');
 		if (!empty($product->cost)) {
-			echo _tag('p.productShowCost', 'Цена: ' . $product->cost . ' руб.');
+			echo _tag('p.productShowCost', 'Цена: ' . number_format($product->cost, 0, '.', ' ') . ' руб.');
 		}
 		echo _tag('p.productShowDescription', $product->description);
 	echo _close('div');

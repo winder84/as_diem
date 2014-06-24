@@ -2,20 +2,24 @@
 
 echo _open('ul.categoryListMenu');
 foreach ($categoryPager as $category) {
-	if (!$category->category_id) {
-		$categories = $category->Categories->toArray();
-		if (!empty($categories)) {
-			echo _tag('li', _tag('a', $category));
-			echo _open('ul.categoryChildren');
+	if ($category->is_active) {
+		if (!$category->category_id) {
+			$categories = $category->Categories->toArray();
+			if (!empty($categories)) {
+				echo _tag('li', _tag('a.noLink', $category));
+				echo _open('ul.categoryChildren');
 				foreach ($category->Categories as $categoryChild) {
-					$products = $categoryChild->Products->toArray();
-					echo _tag('li', _link($categoryChild));
+					if ($categoryChild->is_active) {
+						$products = $categoryChild->Products->toArray();
+						echo _tag('li', _link($categoryChild));
+					}
 				}
-			echo _close('ul');
-		} else {
-			echo _tag('li', _link($category));
-		}
+				echo _close('ul');
+			} else {
+				echo _tag('li', _link($category));
+			}
 //		$parentCategories[$category->category_id][] = $category;
+		}
 	}
 }
 echo _close('ul');
