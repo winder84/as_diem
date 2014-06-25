@@ -7,7 +7,7 @@ default:
     - layout
     - main
     - markdown
-    - hot-sneaks/jquery-ui.min
+    - eggplant/jquery-ui
 
   javascripts:
     - jquery-ui/js/jquery-1.10.2
