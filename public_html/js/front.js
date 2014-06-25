@@ -54,20 +54,21 @@ Recaptcha.create("6LfBEfMSAAAAAKnF39Io9RKQ_LIo90ulFTtCcM16",
 	}
 );
 
-$('.pCat').dialog({
-	position: { my: "center", at: "center center-20%", of: window },
-	draggable: false,
-	width: 700,
-	minHeight: 200,
-	resizable: false,
-	autoOpen: false,
-	modal: true,
-	closeOnEscape: true,
-	title: "Выберите подкатегорию"
-});
+//$('.pCat').dialog({
+//	position: { my: "center", at: "center center-20%", of: window },
+//	draggable: false,
+//	width: 700,
+//	minHeight: 200,
+//	resizable: false,
+//	autoOpen: false,
+//	modal: true,
+//	closeOnEscape: true,
+//	title: "Выберите подкатегорию"
+//});
 
 $('.contactForm').dialog({
 	position: { my: "center", at: "center center-10%", of: window },
+	dialogClass: "contactDialog",
 	draggable: false,
 	width: 700,
 	minHeight: 200,
