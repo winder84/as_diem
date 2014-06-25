@@ -598,3 +598,7 @@ h4 {
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	color: #ddd;
 }
+
+.contactDialog {
+	position: fixed !important;
+}
