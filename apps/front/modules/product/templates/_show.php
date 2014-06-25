@@ -6,19 +6,18 @@ foreach ($product->Specification as $spec) {
 echo _open('div.productShowDiv');
 	echo _open('div.productShowHead');
 		echo _open('div.productShowImg');
-			echo _media($product->Image)->size(300, 200)->method('fit');
+			echo _media($product->Image)->size(300, 300)->method('fit');
+			if (!empty($product->cost)) {
+				echo _tag('p.productShowCost', 'Цена: ' . number_format($product->cost, 0, '.', ' ') . ' руб.');
+			}
 		echo _close('div');
-		echo _tag('div.productVertDelimer');
 		echo _open('div.productShowTD');
-			echo _tag('p.productShowTitle', $product);
-			echo _tag('p.productShowPrevdesc', $product->prevdescription);
+			echo _tag('div.productShowTitle', $product);
+			echo _tag('div.productShowPrevdesc', $product->prevdescription);
 		echo _close('div');
 	echo _close('div');
-//	echo _tag('div.productHorDelimer');
+	echo _tag('div.productHorDelimer');
 	echo _open('div.productShowBody');
-		if (!empty($product->cost)) {
-			echo _tag('p.productShowCost', 'Цена: ' . number_format($product->cost, 0, '.', ' ') . ' руб.');
-		}
 		echo _tag('p.productShowDescription', $product->description);
 	echo _close('div');
 

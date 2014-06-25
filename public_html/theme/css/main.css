@@ -397,8 +397,18 @@ h4 {
 	vertical-align: top;
 }
 
+.productShowHead {
+	margin: 0 0 50px 0;
+}
+
+.productShowImg {
+	box-shadow: 1px 1px 5px #ccc;
+	height: 300px;
+}
+
 .productShowTD {
 	width: 300px;
+	margin: 0 0 0 20px;
 }
 
 .productShowTitle {
@@ -417,8 +427,10 @@ h4 {
 }
 
 .productShowPrevdesc {
+	width: 490px;
 	text-align: justify;
 	margin: 0 10px;
+	font-size: 14px;
 }
 
 .productShowDescription {
@@ -435,7 +447,7 @@ h4 {
 	font-family: Trebuchet MS, Helvetica CY, Sans-serif;
 	font-size: 18px;
 	color: darkred;
-	margin: 20px 20px 20px 640px;
+	margin: 10px 20px 20px 55px;
 	line-height: 24px;
 }
 
