@@ -6,7 +6,10 @@ foreach ($categoryPager as $category) {
 		if (!$category->category_id) {
 			$categories = $category->Categories->toArray();
 			if (!empty($categories)) {
-				echo _tag('li', _tag('a.noLink', $category));
+				echo _open('li.categoryParent');
+					echo _tag('a.noLink', $category);
+					echo _media('redArrowRight.png')->width(30)->method('fit');
+				echo _close('li');
 				echo _open('ul.categoryChildren');
 				foreach ($category->Categories as $categoryChild) {
 					if ($categoryChild->is_active) {

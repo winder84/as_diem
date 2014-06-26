@@ -114,3 +114,12 @@ $('.header_categories_menu').on('click', function(){
 		$(this).children('.cats').toggle( "slide", 200 );
 	}
 );
+
+$('.categoryParent').on('click', function () {
+	$(this).next('.categoryChildren').slideToggle(300);
+	if ($(this).children('img').attr('src') == '/theme/images/redArrowRight.png') {
+		$(this).children('img').attr('src', '/theme/images/greenArrowBottom.png');
+	} else {
+		$(this).children('img').attr('src', '/theme/images/redArrowRight.png');
+	}
+});
