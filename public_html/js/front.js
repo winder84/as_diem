@@ -123,3 +123,10 @@ $('.categoryParent').on('click', function () {
 		$(this).children('img').attr('src', '/theme/images/redArrowRight.png');
 	}
 });
+
+$(document).ready(function () {
+	$('.dm_current').parents('.categoryChildren').prev('.categoryParent').click();
+	if ($('#productCategoryBg').attr('catBg').length > 0) {
+		$('.page_category_show').css('backgroundImage', 'url("/uploads/'+ $('#productCategoryBg').attr('catBg') +'")');
+	}
+});

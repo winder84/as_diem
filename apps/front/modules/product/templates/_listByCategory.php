@@ -1,6 +1,6 @@
 <?php // Vars: $productPager
 
-echo $productPager->renderNavigationTop();
+//echo $productPager->renderNavigationTop();
 
 echo _open('ul.productListUl');
 
@@ -13,7 +13,8 @@ foreach ($productPager as $product)
 
 	echo _close('li');
 }
+echo "<div hidden='hidden' style='display: none;' id='productCategoryBg' catBg='" . $product->Category->Image . "'></div>";
 
 echo _close('ul');
 
-echo $productPager->renderNavigationBottom();
+//echo $productPager->renderNavigationBottom();
