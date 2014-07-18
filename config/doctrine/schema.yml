@@ -72,7 +72,7 @@ Specificationlink:
   columns:
     specification_id:  { type: integer, notnull: true }
     product_id:        { type: integer, notnull: true }
-    value:             { type: float, notnull: true }
+    value:             { type: string}
   relations:
     Specification:
       foreignAlias:   Specificationlinks
