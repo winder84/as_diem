@@ -31,6 +31,8 @@ Mark:
       onDelete:   RESTRICT
 
 Product:
+  actAs:
+    DmGallery:
   columns:
     title:             { type: string(255), notnull: true }
     prevdescription:   { type: clob, extra: ckeditor }

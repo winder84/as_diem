@@ -16,12 +16,14 @@ generator:
           label: Характеристики
         is_active:
           label: Active
+        dm_gallery: Gallery
       list:
         display:
           - '=title'
           - category_id
           - mark_id
           - image_id
+          - dm_gallery
           - sort
           - is_active
           - cost
@@ -52,6 +54,7 @@ generator:
           Image: [image_id_form, image_id_view]
           Description: [description, prevdescription]
           Теги и Характеристики: [tag_list, specification_list]
+          Gallery: [dm_gallery]
           Others: [sort, cost]
         class: ProductAdminForm
         fields: {  }
