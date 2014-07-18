@@ -18,7 +18,9 @@ echo _open('div.productShowDiv');
 	echo _close('div');
 	echo _tag('div.productHorDelimer');
 	echo _open('div.productShowBody');
-		echo _tag('p.productShowDescription', $product->description);
+		echo _open('p.productShowDescription');
+			echo $product->description;
+		echo _close('p');
 	echo _close('div');
 
 	if(!empty($SpecArray)) {
@@ -34,13 +36,14 @@ echo _open('div.productShowDiv');
 		echo _close('table');
 	}
 
+	$images = $product->getDmGallery()->toArray();
 	$media = $product->getDmGallery();
-	if (!empty($media)) {
+	if (!empty($images)) {
 		echo _tag('div.productHorDelimer');
 		echo _open('ul.productGalleryUl');
 			echo _tag('p.specTableTitle', 'Изображения');
 			foreach ($media as $image) {
-				echo _tag('li', _tag('a.toFancy', array('href' => '/uploads/' . $image, 'rel' => 'group_' . $product->id), _media($image)->size(265, 200)));
+				echo _tag('li', _tag('a.toFancy', array('href' => '/uploads/' . $image, 'rel' => 'group_' . $product->id), _media($image)->size(265, 200)->method('fit')));
 			}
 		echo _close('ul');
 	}
