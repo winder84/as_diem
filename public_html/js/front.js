@@ -124,6 +124,8 @@ $('.categoryParent').on('click', function () {
 	}
 });
 
+$("a.toFancy").fancybox();
+
 $(document).ready(function () {
 	$('.dm_current').parents('.categoryChildren').prev('.categoryParent').click();
 	if ($('#productCategoryBg').attr('catBg').length > 0) {

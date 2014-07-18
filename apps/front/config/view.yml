@@ -8,6 +8,7 @@ default:
     - main
     - markdown
     - eggplant/jquery-ui
+    - fancybox/jquery.fancybox
 
   javascripts:
     - jquery-ui/js/jquery-1.10.2
@@ -16,6 +17,7 @@ default:
     - additional-methods.min
     - messages_ru
     - 'http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'
+    - jquery.fancybox.pack
     - front
   has_layout:     true
   layout:         layout

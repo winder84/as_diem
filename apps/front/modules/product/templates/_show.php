@@ -33,4 +33,15 @@ echo _open('div.productShowDiv');
 		}
 		echo _close('table');
 	}
+
+	$media = $product->getDmGallery();
+	if (!empty($media)) {
+		echo _tag('div.productHorDelimer');
+		echo _open('ul.productGalleryUl');
+			echo _tag('p.specTableTitle', 'Изображения');
+			foreach ($media as $image) {
+				echo _tag('li', _tag('a.toFancy', array('href' => '/uploads/' . $image, 'rel' => 'group_' . $product->id), _media($image)->size(265, 200)));
+			}
+		echo _close('ul');
+	}
 echo _close('div');
