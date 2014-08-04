@@ -554,7 +554,8 @@ h4 {
 }
 
 .categoryParent a {
-	width: 278px;
+	width: 248px;
+	padding: 9px 40px 9px 10px;
 }
 
 .categoryParent img {
