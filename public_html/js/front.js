@@ -128,7 +128,10 @@ $("a.toFancy").fancybox();
 
 $(document).ready(function () {
 	$('.dm_current').parents('.categoryChildren').prev('.categoryParent').click();
-	if ($('#productCategoryBg').attr('catBg').length > 0) {
-		$('.page_category_show').css('backgroundImage', 'url("/uploads/'+ $('#productCategoryBg').attr('catBg') +'")');
+	$('.dm_parent').parents('.categoryChildren').prev('.categoryParent').click();
+	if ($('#productCategoryBg').length > 0) {
+		if ($('#productCategoryBg').attr('catBg').length > 0) {
+			$('.page_category_show').css('backgroundImage', 'url("/uploads/'+ $('#productCategoryBg').attr('catBg') +'")');
+		}
 	}
 });
