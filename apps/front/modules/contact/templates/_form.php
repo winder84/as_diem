@@ -35,7 +35,7 @@ echo _tag('table.contact_form_table',
 	).
 	_tag('tr',
 		_tag('td',
-			'Проверочный код:').
+			'Проверочный код<span style="color: red;">*</span>:').
 		_tag('td',
 			'<div class="my_recapcha" id="my_recapcha"></div>')
 	)
