@@ -541,8 +541,8 @@ h4 {
 
 .categoryListMenu a.noLink {
 	background: linear-gradient(to bottom, rgba(200, 200, 200, 1) 0%, rgba(100, 100, 100, 1) 100%);
-	color: #333;
-	text-shadow: 1px 1px 1px #ddd;
+	color: #111;
+	text-shadow: 1px 1px 1px #bbb;
 }
 
 .categoryParent {

@@ -16,12 +16,14 @@ echo _open('div.productShowDiv');
 			echo _tag('div.productShowPrevdesc', $product->prevdescription);
 		echo _close('div');
 	echo _close('div');
-	echo _tag('div.productHorDelimer');
-	echo _open('div.productShowBody');
-		echo _open('p.productShowDescription');
-			echo $product->description;
-		echo _close('p');
-	echo _close('div');
+	if (!empty($product->description)) {
+		echo _tag('div.productHorDelimer');
+		echo _open('div.productShowBody');
+			echo _open('p.productShowDescription');
+				echo $product->description;
+			echo _close('p');
+		echo _close('div');
+	}
 
 	if(!empty($SpecArray)) {
 		echo _tag('div.productHorDelimer');
