@@ -39,19 +39,9 @@ Content:
           filters:            [ specification ]
         listByMark:
           filters:            [ mark ]
-        listByNew:
+        listBySlider:
+        listByMain:
         show:
-
-    specification:
-      model:                  Specification
-      name:                   Характеристика|Характеристики
-      components:
-        list:
-
-    specificationlink:
-      model:                  Specificationlink
-      name:                   Связь характеристики|Связи характеристик
-      components:
 
     tag:
       model:                  Tag

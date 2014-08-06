@@ -17,8 +17,6 @@ generator:
           - '=title'
           - category_id
           - image_id
-          - categories_list
-          - description
           - sort
           - is_active
         sort:

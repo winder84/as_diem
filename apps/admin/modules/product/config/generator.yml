@@ -12,8 +12,6 @@ generator:
       fields:
         tag_list:
           label: Теги
-        specification_list:
-          label: Характеристики
         is_active:
           label: Active
         dm_gallery: Gallery
@@ -23,12 +21,11 @@ generator:
           - category_id
           - mark_id
           - image_id
-          - dm_gallery
-          - sort
+          - tag_list
           - is_active
           - cost
           - isonslider
-          - isnew
+          - isonmain
         sort:
           - title
           - asc
@@ -40,7 +37,7 @@ generator:
           - title
           - is_active
           - isonslider
-          - isnew
+          - isonmain
           - prevdescription
           - description
           - image_id
@@ -50,10 +47,11 @@ generator:
           - cost
       form:
         display:
-          NONE: [title, is_active, isonslider, isnew, category_id, mark_id]
+          NONE: [title, is_active, isonslider, isonmain, category_id, mark_id]
           Image: [image_id_form, image_id_view]
-          Description: [description, prevdescription]
-          Теги и Характеристики: [tag_list, specification_list]
+          Prevdescription: [prevdescription]
+          Description: [description]
+          Теги: [tag_list]
           Gallery: [dm_gallery]
           Others: [sort, cost]
         class: ProductAdminForm

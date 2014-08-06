@@ -44,7 +44,7 @@ Product:
     mark_id:           { type: integer, notnull: true }
     cost:              { type: integer }
     isonslider:        { type: boolean, notnull: true, default:false}
-    isnew:             { type: boolean, notnull: true, default:false}
+    isonmain:          { type: boolean, notnull: true, default:false}
   relations:
     Category:
       foreignAlias:   Products
@@ -59,27 +59,6 @@ Product:
       refClass: Taglink
       local: product_id
       foreign: tag_id
-    Specification:
-      class: Specification
-      refClass: Specificationlink
-      local: product_id
-      foreign: specification_id
-
-Specification:
-  columns:
-    title:             { type: string(255), notnull: true }
-    measure:           { type: string(255), notnull: true }
-
-Specificationlink:
-  columns:
-    specification_id:  { type: integer, notnull: true }
-    product_id:        { type: integer, notnull: true }
-    value:             { type: string}
-  relations:
-    Specification:
-      foreignAlias:   Specificationlinks
-    Product:
-      foreignAlias:   Specificationlinks
 
 Tag:
   columns:

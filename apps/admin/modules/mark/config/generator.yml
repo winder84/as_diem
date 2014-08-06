@@ -16,9 +16,7 @@ generator:
         display:
           - '=title'
           - image_id
-          - products_list
           - country
-          - description
           - sort
           - is_active
         sort:

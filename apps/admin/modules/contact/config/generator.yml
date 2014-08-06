@@ -12,7 +12,6 @@ generator:
       fields: {  }
       list:
         display:
-          - '=created_at'
           - '=name'
           - email
           - phone
