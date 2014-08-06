@@ -127,6 +127,7 @@ $('.categoryParent').on('click', function () {
 $("a.toFancy").fancybox();
 
 $(document).ready(function () {
+	sliderInterval = setInterval(sliderNext, 6000);
 	$('.dm_current').parents('.categoryChildren').prev('.categoryParent').click();
 	$('.dm_parent').parents('.categoryChildren').prev('.categoryParent').click();
 	if ($('#productCategoryBg').length > 0) {
@@ -135,3 +136,29 @@ $(document).ready(function () {
 		}
 	}
 });
+
+function sliderNext () {
+	$('.mainSlider').children('div:visible').fadeOut(500, function() {
+		$(this).addClass('hidden');
+		nextSlide = $(this).next('div');
+		if(nextSlide.length == 0) {
+			nextSlide = $('.mainSlider').children('div:first');
+		}
+		nextSlide.fadeIn(500, function() {
+			$(this).removeClass('hidden');
+		});
+	});
+};
+
+function sliderPrev () {
+	$('.mainSlider').children('div:visible').fadeOut(500, function() {
+		$(this).addClass('hidden');
+		prevSlide = $(this).prev('div');
+		if(prevSlide.length == 0) {
+			prevSlide = $('.mainSlider').children('div:last');
+		}
+		prevSlide.fadeIn(500, function() {
+			$(this).removeClass('hidden');
+		});
+	});
+};

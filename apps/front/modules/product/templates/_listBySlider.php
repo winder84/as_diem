@@ -1,19 +1,30 @@
 <?php // Vars: $productPager
 
 //echo $productPager->renderNavigationTop();
-echo _open('ul');
-
-foreach ($productPager as $product)
-{
-	if ($product->isonslider) {
-		echo _open('li.element');
-
-		echo _link($product);
-
-		echo _close('li');
+$i = 0;
+echo _open('div.mainSlider');
+	foreach ($productPager as $product)
+	{
+		if ($product->isonslider) {
+			$i++;
+			if ($i == 1) {
+				echo _open('div#mainSlide_' . $i);
+					echo _tag('div.sliderImg', _link($product)->text(_media($product->Image)->size(200, 250)->method('fit')));
+					echo _open('div.sliderText');
+						echo _tag('h1.slideTitle',  _link($product)->text($product));
+						echo _tag('h4.slideCost', 'Цена: ' . number_format($product->cost, 0, '.', ' ') . ' руб.');
+					echo _close('div');
+				echo _close('div');
+			} else {
+				echo _open('div.hidden#mainSlide_' . $i);
+					echo _tag('div.sliderImg', _link($product)->text(_media($product->Image)->size(200, 250)->method('fit')));
+					echo _open('div.sliderText');
+						echo _tag('h1.slideTitle',  _link($product)->text($product));
+						echo _tag('h4.slideCost', 'Цена: ' . number_format($product->cost, 0, '.', ' ') . ' руб.');
+					echo _close('div');
+				echo _close('div');
+			}
+		}
 	}
-}
-
-echo _close('ul');
-
+echo _close('div');
 //echo $productPager->renderNavigationBottom();

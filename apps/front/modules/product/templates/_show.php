@@ -1,7 +1,4 @@
 <?php // Vars: $product
-foreach ($product->Specification as $spec) {
-	$SpecArray[] = $spec;
-}
 
 echo _open('div.productShowDiv');
 	echo _open('div.productShowHead');
@@ -23,19 +20,6 @@ echo _open('div.productShowDiv');
 				echo $product->description;
 			echo _close('p');
 		echo _close('div');
-	}
-
-	if(!empty($SpecArray)) {
-		echo _tag('div.productHorDelimer');
-		echo _tag('p.specTableTitle', 'Характеристики');
-		echo _open('table.specTable');
-		foreach ($SpecArray as $spec) {
-			echo _open('tr');
-			echo _tag('td', $spec);
-			echo _tag('td', $spec->Specificationlink[0]->value . ' ' . $spec->measure);
-			echo _close('tr');
-		}
-		echo _close('table');
 	}
 
 	$images = $product->getDmGallery()->toArray();
