@@ -8,7 +8,7 @@ foreach ($categoryPager as $category) {
 			if (!empty($categories)) {
 				echo _open('li.categoryParent');
 					echo _tag('a.noLink', $category);
-					echo _media('redArrowRight.png')->width(30)->method('fit');
+					echo _media('plus.png')->width(25)->method('fit');
 				echo _close('li');
 				echo _open('ul.categoryChildren');
 				foreach ($category->Categories as $categoryChild) {
