@@ -708,11 +708,11 @@ h4 {
 }
 
 .leftArrow {
-	background: url("../images/arrowsArray.png") -540px -45px no-repeat;
+	background: url("../images/arrowsArray.png") -715px -45px no-repeat;
 	margin: -50px 0 0 40px;
 }
 
 .rightArrow {
-	background: url("../images/arrowsArray.png") -460px -45px no-repeat;
+	background: url("../images/arrowsArray.png") -635px -45px no-repeat;
 	margin: -50px 0 0 800px;
 }
