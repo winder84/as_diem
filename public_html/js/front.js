@@ -137,6 +137,9 @@ $(document).ready(function () {
 	}
 });
 
+$('.leftArrow').on('click', sliderPrev);
+$('.rightArrow').on('click', sliderNext);
+
 function sliderNext () {
 	$('.mainSlider').children('div:visible').fadeOut(500, function() {
 		$(this).addClass('hidden');
@@ -148,6 +151,8 @@ function sliderNext () {
 			$(this).removeClass('hidden');
 		});
 	});
+	clearInterval(sliderInterval)
+	sliderInterval = setInterval(sliderNext, 6000);
 };
 
 function sliderPrev () {
@@ -161,4 +166,6 @@ function sliderPrev () {
 			$(this).removeClass('hidden');
 		});
 	});
+	clearInterval(sliderInterval)
+	sliderInterval = setInterval(sliderNext, 6000);
 };
