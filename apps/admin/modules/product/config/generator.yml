@@ -31,7 +31,7 @@ generator:
           - asc
         table_method: getAdminListQuery
         table_count_method: ~
-        sortable: false
+        sortable: true
       filter:
         display:
           - title
@@ -41,7 +41,6 @@ generator:
           - prevdescription
           - description
           - image_id
-          - sort
           - category_id
           - mark_id
           - cost
@@ -53,7 +52,7 @@ generator:
           Description: [description]
           Теги: [tag_list]
           Gallery: [dm_gallery]
-          Others: [sort, cost]
+          Others: [cost]
         class: ProductAdminForm
         fields: {  }
       edit: ~
