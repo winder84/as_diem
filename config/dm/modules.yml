@@ -32,7 +32,6 @@ Content:
       name:                   Оборудование|Оборудование
       components:
         listByCategory:
-          sortable: true
           filters:            [ category ]
         listByTag:
           filters:            [ tag ]

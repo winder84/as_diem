@@ -32,6 +32,7 @@ Mark:
 
 Product:
   actAs:
+    DmVersionable:
     DmSortable: { new: last }
     DmGallery:
   columns:
