@@ -17,14 +17,13 @@ generator:
           - '=title'
           - image_id
           - country
-          - sort
           - is_active
         sort:
           - title
           - asc
         table_method: getAdminListQuery
         table_count_method: ~
-        sortable: false
+        sortable: true
       filter:
         display:
           - title
@@ -33,14 +32,13 @@ generator:
           - prevdescription
           - description
           - image_id
-          - sort
       form:
         display:
           NONE: [title, is_active]
           Image: [image_id_form, image_id_view]
           Description: [description, prevdescription]
           Оборудование: [products_list]
-          Others: [country, sort]
+          Others: [country]
         class: MarkAdminForm
         fields: {  }
       edit: ~

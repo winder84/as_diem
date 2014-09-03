@@ -1,10 +1,12 @@
 Category:
+  actAs:
+    DmVersionable:
+    DmSortable: { new: last }
   columns:
     title:            { type: string(255), notnull: true }
     prevdescription:  { type: clob, extra: ckeditor }
     description:      { type: clob, extra: ckeditor }
     image_id:         { type: integer }
-    sort:             { type: integer }
     is_active:        { type: boolean, notnull: true, default:true}
     category_id:      { type: integer }
   relations:
@@ -16,13 +18,15 @@ Category:
       onDelete:   RESTRICT
 
 Mark:
+  actAs:
+    DmVersionable:
+    DmSortable: { new: last }
   columns:
     title:             { type: string(255), notnull: true }
     country:           { type: string(255), notnull: true }
     prevdescription:   { type: clob, extra: ckeditor }
     description:       { type: clob, extra: ckeditor }
     image_id:          { type: integer }
-    sort:              { type: integer }
     is_active:         { type: boolean, notnull: true, default:true}
   relations:
     Image:

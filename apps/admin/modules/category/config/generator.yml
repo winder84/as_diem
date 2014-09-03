@@ -17,14 +17,13 @@ generator:
           - '=title'
           - category_id
           - image_id
-          - sort
           - is_active
         sort:
           - title
           - asc
         table_method: getAdminListQuery
         table_count_method: ~
-        sortable: false
+        sortable: true
       filter:
         display:
           - title
@@ -32,7 +31,6 @@ generator:
           - prevdescription
           - description
           - image_id
-          - sort
           - category_id
       form:
         display:
@@ -41,7 +39,6 @@ generator:
           Description: [description, prevdescription]
           Категории: [categories_list]
           Оборудование: [products_list]
-          Others: [sort]
         class: CategoryAdminForm
         fields: {  }
       edit: ~
