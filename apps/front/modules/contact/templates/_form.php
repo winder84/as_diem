@@ -11,7 +11,7 @@ echo _tag('table.contact_form_table',
 	).
 	_tag('tr',
 		_tag('td',
-			'Электронная почта<span style="color: red;">*</span>:').
+			'Электронная почта:').
 		_tag('td',
 			$form['email']->field()->error())
 	).

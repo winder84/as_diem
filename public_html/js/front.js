@@ -13,7 +13,7 @@ contactForm.validate({
 			minlength: 3
 		},
 		"contact_form[email]": {
-			required: true,
+			required: false,
 			email: true
 		},
 		"contact_form[phone]": {
@@ -31,7 +31,6 @@ contactForm.validate({
 			minlength: 'Минимальная длина поля - 3 символа'
 		},
 		"contact_form[email]": {
-			required: 'Пожалуйста заполните поле!',
 			email: "Формат: name@domain.com"
 		},
 		"contact_form[phone]": {
